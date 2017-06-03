@@ -1,22 +1,20 @@
-require 'json'
 require 'haversine'
+require_relative 'customer'
 
 class Inviter
   OFFICE_LOCATION = [53.3393, -6.2576841]
   MAX_DISTANCE = 100
 
   def initialize
-    @customers = {}
+    @customers = Customer.parse_customer_list('gistfile1.json')
     @invitees = {}
-
-    parse_customer_list
   end
 
   def gather_invitees
-    @customers.each do |id, info|
-      dist = Haversine.distance(info[:latitude].to_i, info[:longitude].to_i, *(OFFICE_LOCATION)).to_km
+    @customers.each do |customer|
+      dist = Haversine.distance(customer.latitude, customer.longitude, *(OFFICE_LOCATION)).to_km
 
-      @invitees[id] = info[:name] if dist < MAX_DISTANCE
+      @invitees[customer.user_id] = customer.name if dist < MAX_DISTANCE
     end
   end
 
@@ -25,22 +23,4 @@ class Inviter
   end
 
   private
-
-  def parse_customer_list
-    begin
-      file = File.read('gistfile1.json')
-      # handle any type of line endings
-      file.gsub!(/\r\n?/, "\n")
-
-      file.each_line do |line|
-        parsed_line = JSON.parse(line)
-        @customers[parsed_line["user_id"]] = { name: parsed_line["name"],
-                                               latitude: parsed_line["latitude"],
-                                               longitude: parsed_line["longitude"] }
-      end
-    rescue => e
-      puts "Unable to parse the customer list.\n"
-      raise e.backtrace.inspect
-    end
-  end
 end
