@@ -13,4 +13,16 @@ describe Array do
       expect([1, 2, 3, 4].squash).to eq([1, 2, 3, 4])
     end
   end
+
+  describe "when the array is nested" do
+    it "returns correctly" do
+      expect([1, [[2], 3], 4].squash).to eq([1, 2, 3, 4])
+    end
+  end
+
+  describe "when the array is empty" do
+    it "returns correctly" do
+      expect([].squash).to eq([])
+    end
+  end
 end
