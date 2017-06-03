@@ -21,6 +21,4 @@ class Inviter
   def order_invitees
     @invitees.sort.to_h if @invitees.length > 1
   end
-
-  private
 end
