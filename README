@@ -1,5 +1,7 @@
 What's your proudest achievement? It can be a personal project or something you've worked on professionally. Just a short paragraph is fine, but I'd love to know why you're proud of it, what impact it had (If any) and any insights you took from it.
 
+    By far and above my proudest achievement in coding has been the creation of StockAid. I have donated time in my life to a number of non-profit organizations and other causes but none has been so rewarding as StockAid. The work I have done has become the backbone for the non-profit that provides tens of thousands of items per year (valuing over $250,000) to victims of sexual assult and human trafficking. Before I was able to help with 2 hands, now my mind is the tool I can use to create assistance to those in need. I only hope I can inspire others to follow me in this discovery that through using our minds our reach can be even greater.
+
 
 Write a function that will flatten an array of arbitrarily nested arrays of integers into a flat array of integers. e.g. [[1,2,[3]],4] → [1,2,3,4].
  - If the language you're using has a function to flatten arrays, you should pretend it doesn't exist.
