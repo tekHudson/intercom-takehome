@@ -13,6 +13,7 @@
     - You can use the first formula from this Wikipedia article to calculate distance. Don't forget,  you'll need to convert degrees to radians.
     - The GPS coordinates for our Dublin office are 53.3393,-6.2576841.
     - You can find the Customer list here.
+    ⭑ Please don’t forget, your code should be production ready, clean and tested!
 
 ###### Requirements:
 - You will need ruby (requires version 2.1+)
@@ -28,4 +29,4 @@
 
 
 
-⭑ Please don’t forget, your code should be production ready, clean and tested!
+
