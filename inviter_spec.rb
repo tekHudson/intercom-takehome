@@ -1,6 +1,5 @@
 require 'rspec'
 require_relative 'inviter'
-require_relative 'customer'
 
 describe Inviter do
   before do
