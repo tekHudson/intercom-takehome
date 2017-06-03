@@ -2,6 +2,7 @@ require 'haversine'
 require_relative 'customer'
 
 class Inviter
+  attr_reader :customers, :invitees
   OFFICE_LOCATION = [53.3393, -6.2576841]
   MAX_DISTANCE = 100
 
@@ -18,7 +19,7 @@ class Inviter
     end
   end
 
-  def order_invitees
+  def sort_invitees
     @invitees.sort.to_h if @invitees.length > 1
   end
 end

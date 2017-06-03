@@ -5,6 +5,6 @@ inviter = Inviter.new
 
 inviter.gather_invitees
 
-inviter.order_invitees.each do |k, v|
+inviter.sort_invitees.each do |k, v|
   puts "Id: #{k} Name: #{v}\n"
 end
