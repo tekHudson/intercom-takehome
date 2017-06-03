@@ -1,5 +1,5 @@
 require 'rspec'
-require_relative 'inviter'
+require_relative '../lib/inviter'
 
 describe Inviter do
   before do

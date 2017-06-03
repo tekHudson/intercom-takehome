@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require_relative 'inviter'
+require_relative './lib/inviter'
 
 inviter = Inviter.new
 

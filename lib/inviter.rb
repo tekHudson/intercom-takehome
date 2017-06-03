@@ -7,7 +7,7 @@ class Inviter
   MAX_DISTANCE = 100
 
   def initialize
-    @customers = Customer.parse_customer_list('gistfile1.json')
+    @customers = Customer.parse_customer_list('./assets/gistfile1.json')
     @invitees = {}
   end
 
